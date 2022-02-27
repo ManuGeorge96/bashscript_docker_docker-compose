@@ -1,2 +1,17 @@
 # bashscript_docker_docker-compose
-A bash script to Install Latest Docker and Docker-compose
+
+## About
+
+Bash Script which Automates Installation of Docker service and Docker-compose for Linux.
+
+## How to..
+
+- ```sh
+   git clone https://github.com/ManuGeorge96/bashscript_docker_docker-compose.git
+  ```
+- ```sh
+   cd  bashscript_docker_docker-compose
+  ```
+- ```sh
+   ./script1.sh
+  ``` 
