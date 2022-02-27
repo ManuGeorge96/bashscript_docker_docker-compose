@@ -20,10 +20,13 @@ docker-composenst () {
 }
 printf "\n\tInstalling Docker....\n"
 sleep 4
-ver=$(lsb_release -a | grep "Distributor ID:" | awk '{print $3}')
-if [ $ver == 'Ubuntu' ]; then
+which apt-get >/dev/null 2>&1
+if [ $? = 0 ]; then
+  ver=$(lsb_release -a | grep "Distributor ID:" | awk '{print $3}')
+fi  
+if [ "$ver" == "Ubuntu" ]; then
   snap install docker >> /dev/null
-  snap start docker
+  snap start docker  
 else
   yum install docker -y >> /dev/null
   service docker restart >> /dev/null
@@ -40,4 +43,5 @@ else
   sleep 3
   yum install wget -y >> /dev/null
   docker-composenst
-fi	
+fi
+printf "\n\tCompleted Installations."
