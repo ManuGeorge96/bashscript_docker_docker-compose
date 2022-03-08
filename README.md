@@ -1,3 +1,4 @@
+[![Generic badge](https://img.shields.io/badge/BUILD-PASS-BLUE.svg)](https://shields.io/)
 # bashscript_docker_docker-compose
 
 ## About
